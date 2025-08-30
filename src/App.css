@@ -1,0 +1,157 @@
+@font-face {
+  font-family: myFont;
+  src: url(/assets/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: myFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 180px;
+  background: transparent;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.search-box button {
+  padding: 13px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.search-box button:hover {
+  transform: scale(1.1);
+}
+
+.search-box button img {
+  width: 20px;
+  height: 20px;
+}
+
+.png {
+  height: 190px;
+  margin: -20px;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px); 
+  animation: slideLeft 0.8s forwards ease-out;
+}
+
+#weather-icon {
+  transition: opacity 0.3s ease;
+}
+
+.temp {
+  font-size: 800%;
+  margin: 0px;
+  font-weight: 300;
+}
+.city {
+  font-weight: 200;
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+#maincon {
+  background: transparent;
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: white;
+}
+
+#item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 8px;
+  min-width: 80px;
+  color: #fff;
+}
+
+.col img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+/* 
+#box {
+  display: none;
+} */
+
+@media (max-width: 500px) {
+  .temp {
+    font-size: 400%;
+  }
+  #maincon {
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .search-box input {
+    width: 140px;
+    font-size: 14px;
+  }
+  .png {
+    height: 140px;
+  }
+}
